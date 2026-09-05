@@ -13,11 +13,11 @@ using Robust.Shared.GameStates;
 using Robust.Shared.Serialization;
 using Robust.Shared.Serialization.Manager.Attributes;
 using Robust.Shared.ViewVariables;
-using Robust.Shared.Utility;        //omu
-using Robust.Shared.Prototypes;       //omu
-using Content.Shared.Random;        //omu
-using Robust.Shared.Toolshed.TypeParsers;    //omu
-using Content.Shared.Radio;        //omu
+using Robust.Shared.Utility;
+using Robust.Shared.Prototypes;
+using Content.Shared.Random;
+using Robust.Shared.Toolshed.TypeParsers;
+using Content.Shared.Radio;
 
 namespace Content.Goobstation.Shared.Supermatter.Components;
 
@@ -420,7 +420,6 @@ public sealed partial class SupermatterComponent : Component
     public SupermatterStatusType Status = SupermatterStatusType.Inactive;
     #endregion EE
 
-    // Omu start
     #region Events
     [ViewVariables(VVAccess.ReadOnly)]
     [DataField("harsheventThreshold")]
@@ -501,6 +500,7 @@ public sealed partial class SupermatterEventPrototype : IPrototype
     public LocId? Announcement;
 }
 #endregion
+ 
 [Serializable, NetSerializable]
 public sealed partial class SupermatterDoAfterEvent : SimpleDoAfterEvent
 {
